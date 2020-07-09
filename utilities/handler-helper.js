@@ -97,7 +97,7 @@ function _listV1(model, query, Log) {
 
 async function _listV2({ model, query, Log, restCall = false, credentials }) {
   model = getModel(model)
-  const RestHapi = require('../rest-hapi')
+  const RestHapi = require('../restapi-with-hapi')
   Log = Log || RestHapi.getLogger('list')
 
   if (restCall) {
@@ -304,7 +304,7 @@ async function _findV2({
   credentials
 }) {
   model = getModel(model)
-  const RestHapi = require('../rest-hapi')
+  const RestHapi = require('../restapi-with-hapi')
   Log = Log || RestHapi.getLogger('find')
 
   if (restCall) {
@@ -461,7 +461,7 @@ async function _createV2({
   credentials
 }) {
   model = getModel(model)
-  const RestHapi = require('../rest-hapi')
+  const RestHapi = require('../restapi-with-hapi')
   Log = Log || RestHapi.getLogger('create')
 
   if (restCall) {
@@ -639,7 +639,7 @@ async function _updateV2({
   credentials
 }) {
   model = getModel(model)
-  const RestHapi = require('../rest-hapi')
+  const RestHapi = require('../restapi-with-hapi')
   Log = Log || RestHapi.getLogger('update')
 
   if (restCall) {
@@ -794,7 +794,7 @@ async function _deleteOneV2({
   credentials
 }) {
   model = getModel(model)
-  const RestHapi = require('../rest-hapi')
+  const RestHapi = require('../restapi-with-hapi')
   Log = Log || RestHapi.getLogger('deleteOne')
 
   if (restCall) {
@@ -956,7 +956,7 @@ async function _deleteManyV2({
   credentials
 }) {
   model = getModel(model)
-  const RestHapi = require('../rest-hapi')
+  const RestHapi = require('../restapi-with-hapi')
   Log = Log || RestHapi.getLogger('deleteOne')
 
   if (restCall) {
@@ -1100,7 +1100,7 @@ async function _addOneV2({
 }) {
   ownerModel = getModel(ownerModel)
   childModel = getModel(childModel)
-  const RestHapi = require('../rest-hapi')
+  const RestHapi = require('../restapi-with-hapi')
   Log = Log || RestHapi.getLogger('addOne')
 
   if (restCall) {
@@ -1305,7 +1305,7 @@ async function _removeOneV2({
 }) {
   ownerModel = getModel(ownerModel)
   childModel = getModel(childModel)
-  const RestHapi = require('../rest-hapi')
+  const RestHapi = require('../restapi-with-hapi')
   Log = Log || RestHapi.getLogger('removeOne')
 
   if (restCall) {
@@ -1492,7 +1492,7 @@ async function _addManyV2({
 }) {
   ownerModel = getModel(ownerModel)
   childModel = getModel(childModel)
-  const RestHapi = require('../rest-hapi')
+  const RestHapi = require('../restapi-with-hapi')
   Log = Log || RestHapi.getLogger('addMany')
 
   if (restCall) {
@@ -1703,7 +1703,7 @@ async function _removeManyV2({
 }) {
   ownerModel = getModel(ownerModel)
   childModel = getModel(childModel)
-  const RestHapi = require('../rest-hapi')
+  const RestHapi = require('../restapi-with-hapi')
   Log = Log || RestHapi.getLogger('removeMany')
 
   if (restCall) {
@@ -1897,7 +1897,7 @@ async function _getAllV2({
 }) {
   ownerModel = getModel(ownerModel)
   childModel = getModel(childModel)
-  const RestHapi = require('../rest-hapi')
+  const RestHapi = require('../restapi-with-hapi')
   Log = Log || RestHapi.getLogger('getAll')
 
   if (restCall) {
@@ -2498,7 +2498,7 @@ function defaultCreds(credentials) {
 }
 
 function assertServer() {
-  const RestHapi = require('../rest-hapi')
+  const RestHapi = require('../restapi-with-hapi')
   if (_.isEmpty(RestHapi.server)) {
     const error = new Error(
       'No server found. You must register rest-hapi with a hapi server before using `restCall = true`.'
@@ -2509,7 +2509,7 @@ function assertServer() {
 }
 
 function getModel(model) {
-  const RestHapi = require('../rest-hapi')
+  const RestHapi = require('../restapi-with-hapi')
   if (typeof model === 'string') {
     return RestHapi.models[model]
   } else {
