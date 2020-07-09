@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JKHeadley/rest-hapi.git"
+    "url": "https://github.com/falleson/restapi-with-hapi"
   },
   "keywords": [
     "hapi",
@@ -41,15 +41,12 @@
     "generator"
   ],
   "author": {
-    "name": "Justin Headley",
-    "email": "headley.justin@gmail.com"
+    "name": "Luis Lu",
+    "email": "falleson@163.com"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/JKHeadley/rest-hapi/issues/new",
-    "email": "headley.justin@gmail.com"
-  },
-  "homepage": "https://github.com/JKHeadley/rest-hapi#readme",
+
+  "homepage": "https://github.com/falleson/restapi-with-hapi#readme",
   "dependencies": {
     "@hapi/boom": "^9.1.0",
     "@hapi/hapi": "^19.1.1",
